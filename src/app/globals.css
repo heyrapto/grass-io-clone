@@ -14,3 +14,13 @@ body {
   font-family: var(--font-dm-sans);
   background-color: white;
 }
+
+@layer utilities {
+  .shadow-step-bottom {
+    @apply shadow-[0px_4px_0px_#00000020];
+  }
+
+  .shadow-step-bottom-right {
+    @apply shadow-[4px_4px_0px_#00000020];
+  }
+}
