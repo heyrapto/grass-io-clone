@@ -5,7 +5,8 @@ const HeroSection = () => {
   const people = ["/hero-1.webp", "/hero-2.webp", "/hero-3.webp"];
 
   return (
-    <section className="relative h-screen bg-[url('/hero-1.webp')] bg-cover bg-center">
+    <section className="relative h-screen bg-[url('https://www.grass.io/images/grass-header-3.webp')] bg-cover bg-center">
+
       {/* Container */}
       <div className="w-[80%] mx-auto h-full flex items-end pb-[150px] justify-between">
         
