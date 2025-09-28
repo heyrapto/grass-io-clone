@@ -2,7 +2,7 @@ import OverviewCard from "../ui/overview-card"
 
 const OverviewSection = () => {
     return (
-        <section className="w-[80%] max-w-[1500px] mx-auto flex flex-col">
+        <section className="flex flex-col">
             <OverviewCard
                 subtitle="Why It Matters"
                 title="You pay for internet every month. But most of it goes unused, doing nothing for you. Grass puts the unused part of your connection to work, and turns it into rewards. It's a resource you've always had. Now it works for you."
