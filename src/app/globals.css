@@ -16,11 +16,19 @@ body {
 }
 
 @layer utilities {
-  .shadow-step-bottom {
+  .shadow-bottom {
     @apply shadow-[0px_4px_0px_#00000020];
   }
 
-  .shadow-step-bottom-right {
+  .shadow-bottom-right {
     @apply shadow-[4px_4px_0px_#00000020];
+  }
+
+  .hover-shadow-bottom {
+    @apply hover:shadow-[0px_4px_0px_#00000020];
+  }
+
+  .hover-shadow-bottom-right {
+    @apply hover:shadow-[4px_4px_0px_#00000020];
   }
 }
