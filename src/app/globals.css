@@ -28,5 +28,5 @@ body {
   
   .hover-shadow-bottom-right {
     @apply hover:shadow-[4px_4px_0px_rgba(0,0,0,0.8)];
-  }  
+  }
 }

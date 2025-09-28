@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <Button 
         title="Open Dashboard"
-        className="min-w-[150px] text-[16px]"
+        className={`min-w-[150px] text-[16px]`}
         />
     </nav>
   )
