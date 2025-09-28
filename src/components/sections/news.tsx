@@ -47,7 +47,7 @@ const NewsSection = () => {
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {newsItems.map((item, index) => (
-            <ShadowCard key={index} shadow="bottom-right" className="overflow-hidden p-0">
+            <ShadowCard key={index} hoverShadow="bottom-right" className="overflow-hidden p-0">
               {/* Image Section */}
               <div className="relative h-48 bg-gradient-to-br from-green-100 to-green-200">
                 {item.image && (

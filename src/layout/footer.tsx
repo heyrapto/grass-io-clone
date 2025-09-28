@@ -1,83 +1,131 @@
+import { FaTwitter, FaDiscord, FaTelegram, FaReddit, FaGlobe } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 const Footer = () => {
+    const navigationLinks = [
+      { name: "Home", href: "/" },
+      { name: "Learn", href: "/learn" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Media Kit", href: "/media-kit" },
+      { name: "Documentation", href: "/documentation" }
+    ];
+  
+    const socialLinks = [
+      { name: "Twitter", icon: FaTwitter, href: "#" },
+      { name: "Email", icon: MdEmail, href: "#" },
+      { name: "Telegram", icon: FaTelegram, href: "#" },
+      { name: "Reddit", icon: FaReddit, href: "#" },
+      { name: "Discord", icon: FaDiscord, href: "#" }
+    ];
+  
+    const legalLinks = [
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      { name: "General Terms and Conditions", href: "/terms" },
+      { name: "Grass Policy", href: "/grass-policy" },
+      { name: "Cookie Settings", href: "/cookie-settings" }
+    ];
+  
+    const certifications = [
+      { name: "ANTBOX", color: "bg-cyan-500" },
+      { name: "ORG", color: "bg-orange-500" }
+    ];
+  
     return (
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="w-[80%] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            {/* Logo and Brand */}
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-lime-400 rounded flex items-center justify-center">
-                  <span className="text-black font-bold text-sm">🌱</span>
-                </div>
-                <span className="text-xl font-bold">grass</span>
-              </div>
-            </div>
-  
-            {/* Navigation Links */}
-            <div className="col-span-1">
-              <ul className="space-y-3">
-                <li><a href="/home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                <li><a href="/learn" className="text-gray-300 hover:text-white transition-colors">Learn</a></li>
-                <li><a href="/faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="/media-kit" className="text-gray-300 hover:text-white transition-colors">Media Kit</a></li>
-                <li><a href="/documentation" className="text-gray-300 hover:text-white transition-colors">Documentation</a></li>
-              </ul>
-            </div>
-  
-            {/* Social Links */}
-            <div className="col-span-1">
-              <ul className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  <span>X</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  <span>📧</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  <span>📱</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  <span>🌐</span>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
-                  <span>💬</span>
-                </a>
-              </ul>
-            </div>
-  
-            {/* Certifications */}
-            <div className="col-span-1">
-              <div className="text-right">
-                <p className="text-gray-400 text-sm mb-2">Member Of | Certified By</p>
-                <div className="flex justify-end gap-2">
-                  <div className="w-12 h-8 bg-blue-500 rounded flex items-center justify-center">
-                    <span className="text-xs text-white font-bold">CERT</span>
-                  </div>
-                  <div className="w-12 h-8 bg-orange-500 rounded flex items-center justify-center">
-                    <span className="text-xs text-white font-bold">ORG</span>
+        <footer className="mt-auto">
+        <div className="w-[80%] mx-auto pb-8">
+          <div className="bg-gray-900 text-white rounded-t-3xl">
+            <div className="p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                {/* Logo and Brand */}
+                <div className="col-span-1">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 bg-lime-400 rounded flex items-center justify-center">
+                      <span className="text-black font-bold text-sm">🌱</span>
+                    </div>
+                    <span className="text-xl font-bold">grass</span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
   
-          {/* Copyright and Legal Links */}
-          <div className="border-t border-gray-700 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-gray-400 text-sm">
-                © 2025 Grass Opco Ltd. All trademarks used on this website are the property of Grass Opco Ltd. All rights reserved.
-              </p>
-              <div className="flex gap-6 text-sm">
-                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                <a href="/terms" className="text-gray-400 hover:text-white transition-colors">General Terms and Conditions</a>
-                <a href="/grass-policy" className="text-gray-400 hover:text-white transition-colors">Grass Policy</a>
-                <a href="/cookie-settings" className="text-gray-400 hover:text-white transition-colors">Cookie Settings</a>
+                {/* Navigation Links */}
+                <div className="col-span-1">
+                  <ul className="space-y-3">
+                    {navigationLinks.map((link, index) => (
+                      <li key={index}>
+                        <a 
+                          href={link.href} 
+                          className="text-gray-300 hover:text-white transition-colors"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+  
+                {/* Social Links */}
+                <div className="col-span-1">
+                  <div className="flex gap-3">
+                    {socialLinks.map((social, index) => {
+                      const IconComponent = social.icon;
+                      return (
+                        <a 
+                          key={index}
+                          href={social.href} 
+                          className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"
+                          aria-label={social.name}
+                        >
+                          <IconComponent className="w-4 h-4" />
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+  
+                {/* Certifications */}
+                <div className="col-span-1">
+                  <div className="text-right">
+                    <p className="text-gray-400 text-sm mb-3">Member Of | Certified By</p>
+                    <div className="flex justify-end gap-2">
+                      {certifications.map((cert, index) => (
+                        <div 
+                          key={index}
+                          className={`w-14 h-10 ${cert.color} rounded-lg flex items-center justify-center`}
+                        >
+                          <span className="text-xs text-white font-bold">
+                            {cert.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              {/* Copyright and Legal Links */}
+              <div className="border-t border-gray-700 pt-6">
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                  <p className="text-gray-400 text-sm max-w-md">
+                    © 2025 Grass Opco Ltd. All trademarks used on this website are the property of Grass Opco Ltd. All rights reserved.
+                  </p>
+                  <div className="flex flex-wrap gap-6 text-sm">
+                    {legalLinks.map((link, index) => (
+                      <a 
+                        key={index}
+                        href={link.href} 
+                        className="text-gray-400 hover:text-white transition-colors whitespace-nowrap"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </footer>
+  
     );
-};
+  };
 
 export default Footer;

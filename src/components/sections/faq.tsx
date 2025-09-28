@@ -52,11 +52,11 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-2xl overflow-hidden"
+              className="border border-gray-200 rounded-2xl overflow-hidden cursor-pointer"
             >
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors  cursor-pointer"
               >
                 <h3 className="text-lg font-semibold text-gray-900">
                   {faq.question}
@@ -85,7 +85,7 @@ const FAQSection = () => {
         <div className="text-center mt-8">
           <p className="text-gray-600">
             Have more questions? Check out our full{" "}
-            <a href="/faq" className="text-blue-600 hover:underline font-medium">
+            <a href="/faq" className="text-black underline font-medium">
               FAQ
             </a>
             .

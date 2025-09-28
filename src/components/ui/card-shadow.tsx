@@ -22,7 +22,7 @@ export function ShadowCard({ children, shadow = "none", hoverShadow = "none", cl
   
     return (
       <div
-        className={`bg-white rounded-2xl border border-gray-200 p-6 ${shadowClass} ${hoverShadowClass} ${className}`}
+        className={`rounded-2xl border border-gray-200 p-6 cursor-pointer ${shadowClass} ${hoverShadowClass} ${className}`}
       >
         {children}
       </div>
