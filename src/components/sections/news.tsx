@@ -9,24 +9,24 @@ const NewsSection = () => {
       description: "Grass 101: What is Grass?",
       date: "October 14",
       category: "Basics",
-      image: "/news/grass-101.webp",
-      logo: "/grass-logo.svg"
+      image: "/blog1.png",
+      hasLargeTitle: false
     },
     {
-      title: "Grass Privacy & Security",
+      title: "Grass Privacy & Security", 
       description: "Reclaim Your Internet: How Grass Lets You Safely Share Your Internet",
       date: "October 08",
       category: "Basics",
-      image: "/news/privacy-security.webp",
-      logo: "/grass-logo.svg"
+      image: "/blog2.png",
+      hasLargeTitle: false
     },
     {
       title: "Enter The Data Wars",
-      description: "Enter The Data Wars",
+      description: "Enter The Data Wars", 
       date: "August 11",
       categories: ["Research", "Discovery"],
-      image: "/news/data-wars.webp",
-      logo: "/grass-logo.svg"
+      image: "/blog3.webp",
+      hasLargeTitle: false
     }
   ];
 
@@ -40,49 +40,46 @@ const NewsSection = () => {
           </h2>
           <Button
             title="LEARN MORE"
-            className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors font-medium"
+            className=""
+            variant="black"
           />
         </div>
 
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {newsItems.map((item, index) => (
-            <ShadowCard key={index} hoverShadow="bottom-right" className="overflow-hidden p-0">
+            <ShadowCard key={index} hoverShadow="bottom-right" className="overflow-hidden p-0 h-full">
               {/* Image Section */}
-              <div className="relative h-48 bg-gradient-to-br from-green-100 to-green-200">
-                {item.image && (
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                )}
-                {/* Logo Overlay */}
-                <div className="absolute top-4 left-4">
-                  <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-2">
-                    <span>🌱</span>
-                    <span>grass</span>
-                  </div>
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Content Section */}
-              <div className="p-6">
-                <p className="text-gray-500 text-sm mb-2">{item.date}</p>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <div className="p-6 flex-1">
+                <p className="text-gray-500 text-sm mb-3">{item.date}</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 leading-snug">
                   {item.description}
-                </h3>
+                </h4>
                 
                 {/* Categories */}
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-3 flex-wrap">
                   {item.category && (
-                    <span className="text-green-600 text-sm font-medium">
+                    <span className="text-teal-600 text-sm font-medium">
                       {item.category}
                     </span>
                   )}
                   {item.categories && item.categories.map((cat, i) => (
-                    <span key={i} className="text-green-600 text-sm font-medium">
+                    <span 
+                      key={i} 
+                      className={`text-sm font-medium ${
+                        cat === 'Research' ? 'text-teal-600' : 'text-teal-500'
+                      }`}
+                    >
                       {cat}
                     </span>
                   ))}
