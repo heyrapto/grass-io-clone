@@ -1,8 +1,10 @@
+import Navbar from "@/layout/navbar";
+
 const LandingPage = () => {
   return (
-    <div>
-      
-    </div>
+    <main className="">
+      <Navbar />
+    </main>
   )
 }
 

@@ -5,8 +5,6 @@
 }
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -17,18 +15,18 @@ body {
 
 @layer utilities {
   .shadow-bottom {
-    @apply shadow-[0px_4px_0px_#00000020];
+    @apply shadow-[0px_4px_0px_rgba(0,0,0,0.8)];
   }
-
+  
   .shadow-bottom-right {
-    @apply shadow-[4px_4px_0px_#00000020];
+    @apply shadow-[4px_4px_0px_rgba(0,0,0,0.8)];
   }
-
+  
   .hover-shadow-bottom {
-    @apply hover:shadow-[0px_4px_0px_#00000020];
+    @apply hover:shadow-[0px_4px_0px_rgba(0,0,0,0.8)];
   }
-
+  
   .hover-shadow-bottom-right {
-    @apply hover:shadow-[4px_4px_0px_#00000020];
-  }
+    @apply hover:shadow-[4px_4px_0px_rgba(0,0,0,0.8)];
+  }  
 }
