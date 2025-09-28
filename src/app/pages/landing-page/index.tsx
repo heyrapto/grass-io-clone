@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/hero";
+import OverviewSection from "@/components/sections/overview";
 import Navbar from "@/layout/navbar";
 
 const LandingPage = () => {
@@ -6,6 +7,7 @@ const LandingPage = () => {
     <main className="">
       <Navbar />
       <HeroSection />
+      <OverviewSection />
     </main>
   )
 }

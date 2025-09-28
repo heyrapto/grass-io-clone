@@ -5,17 +5,16 @@ const HeroSection = () => {
   const people = ["/hero-1.webp", "/hero-2.webp", "/hero-3.webp"];
 
   return (
-    <section className="relative h-screen bg-[url('https://www.grass.io/images/grass-header-3.webp')] bg-cover bg-center">
-
+    <section className="relative h-screen bg-[url('/hero-bg.webp')] bg-cover bg-center">
       {/* Container */}
-      <div className="w-[80%] mx-auto h-full flex items-end pb-[150px] justify-between">
+      <div className="w-[80%] mx-auto h-full flex items-end pb-[200px] justify-between">
         
         {/* Left content */}
-        <div className="flex flex-col gap-6 max-w-[450px] text-white z-10">
+        <div className="flex flex-col gap-2 max-w-[450px] text-white z-10">
           <h1 className="text-[55px] font-bold leading-tight">
             Get Rewarded For The Internet You Don’t Use
           </h1>
-          <p className="text-[25px] text-gray-200">
+          <p className="text-[25px] text-gray-200 pt-[15px]">
             Grass turns your unused internet into rewards automatically.
           </p>
 
