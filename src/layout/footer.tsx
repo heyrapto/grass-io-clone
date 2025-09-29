@@ -37,9 +37,9 @@ const Footer = () => {
         <div className="bg-black text-white rounded-t-3xl">
           <div className="p-6 md:p-12">
             {/* Top Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
+            <div className="flex flex-col md:flex-row justify-between gap-10 mb-10">
               {/* Logo + Nav Links */}
-              <div className="flex flex-col sm:flex-row sm:items-start sm:gap-10">
+              <div className="flex flex-col sm:flex-row sm:gap-10">
                 <Image
                   src="/logo-white.webp"
                   alt="Logo"
@@ -62,7 +62,7 @@ const Footer = () => {
               </div>
 
               {/* Social + Certifications */}
-              <div className="flex flex-col justify-between gap-8 md:col-span-2 lg:col-span-1">
+              <div className="flex flex-col gap-8 md:items-end">
                 {/* Social Icons */}
                 <div className="flex gap-3">
                   {socialLinks.map((social, index) => {
