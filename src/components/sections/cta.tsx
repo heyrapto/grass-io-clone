@@ -15,22 +15,22 @@ const CTASection1 = () => {
             Now You're Getting{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Real Value</span>
-              <motion.svg 
-                className="absolute bottom-[-5px] left-0 w-full h-3" 
-                viewBox="0 0 200 12" 
+              <motion.svg
+                className="absolute bottom-[-5px] left-0 w-full h-3"
+                viewBox="0 0 200 12"
                 preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.6 }}
                 style={{ transformOrigin: "left" }}
               >
-                <path 
-                  d="M2,7 Q50,3 100,7 T198,7" 
-                  stroke="#bef264" 
-                  strokeWidth="6" 
-                  fill="none" 
+                <path
+                  d="M2,7 Q50,3 100,7 T198,7"
+                  stroke="#bef264"
+                  strokeWidth="6"
+                  fill="none"
                   strokeLinecap="round"
                 />
               </motion.svg>
@@ -50,16 +50,13 @@ const CTASection1 = () => {
               <p className="text-lg text-black mb-6">
                 Start earning rewards just by sharing your internet.
               </p>
-              <Button
-                title="DOWNLOAD GRASS"
-                className="bg-black text-white"
-              />
+              <Button title="DOWNLOAD GRASS" className="bg-black text-white" />
             </div>
-            
+
             {/* Right side illustration */}
             <div className="flex-shrink-0 absolute right-0 top-[-110px]">
               <Image
-                src="/cta-1.png" 
+                src="/cta-1.png"
                 alt="Download App Illustration"
                 width={300}
                 height={300}
@@ -78,7 +75,6 @@ const CTASection2 = () => {
   const words = ["You're", "Already", "Paying", "For", "Internet"];
 
   useEffect(() => {
-    // Pick a random word index (excluding first word for better visual)
     const randomIndex = Math.floor(Math.random() * (words.length - 1)) + 1;
     setHighlightedWord(randomIndex);
   }, []);
@@ -106,22 +102,22 @@ const CTASection2 = () => {
                 {index === highlightedWord ? (
                   <span className="relative inline-block mx-2">
                     <span className="relative z-10">{word}</span>
-                    <motion.svg 
-                      className="absolute bottom-[-5px] left-0 w-full h-3" 
-                      viewBox="0 0 150 12" 
+                    <motion.svg
+                      className="absolute bottom-[-5px] left-0 w-full h-3"
+                      viewBox="0 0 150 12"
                       preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
                       initial={{ scaleX: 0 }}
                       whileInView={{ scaleX: 1 }}
                       transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: false, amount: 0.6 }}
                       style={{ transformOrigin: "left" }}
                     >
-                      <path 
-                        d="M2,7 Q37.5,3 75,7 T148,7" 
-                        stroke="#bef264" 
-                        strokeWidth="6" 
-                        fill="none" 
+                      <path
+                        d="M2,7 Q37.5,3 75,7 T148,7"
+                        stroke="#bef264"
+                        strokeWidth="6"
+                        fill="none"
                         strokeLinecap="round"
                       />
                     </motion.svg>
@@ -139,7 +135,7 @@ const CTASection2 = () => {
 
         {/* Background Image Card */}
         <motion.div
-          className="relative bg-[url('/download-grass-today.png')] bg-cover bg-center rounded-3xl p-8 md:p-16 min-h-[900px] flex items-center justify-center overflow-hidden"
+          className="relative bg-[url('/download-grass-today.png')] bg-cover bg-center rounded-3xl p-8 md:p-16 lg:min-h-[900px] min-h-[400px] flex items-center justify-center overflow-hidden"
           initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
@@ -156,11 +152,7 @@ const CTASection2 = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Download Grass Today
             </h3>
-            <Button
-              title="DOWNLOAD GRASS"
-              variant="green"
-              className=""
-            />
+            <Button title="DOWNLOAD GRASS" variant="green" className="" />
           </motion.div>
         </motion.div>
       </div>
