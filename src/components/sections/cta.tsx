@@ -18,7 +18,7 @@ const CTASection1 = () => {
           </div>
   
           {/* Green CTA Card */}
-          <div className="bg-lime-400 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+          <div className="bg-lime-400 rounded-3xl h-[225px] p-8 md:p-12 relative overflow-visible">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="flex-1 z-10">
                 <h3 className="text-3xl md:text-4xl font-bold text-black mb-4">
@@ -34,9 +34,9 @@ const CTASection1 = () => {
               </div>
               
               {/* Right side illustration - placeholder for actual image */}
-              <div className="flex-shrink-0 relative">
+              <div className="flex-shrink-0 absolute right-0 top-[-110px]">
                 <Image
-                  src="/cta-illustration.png" // Replace with actual image path
+                  src="/cta-1.png" 
                   alt="Download App Illustration"
                   width={300}
                   height={300}
