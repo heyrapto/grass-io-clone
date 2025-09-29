@@ -8,10 +8,10 @@ import { useEffect, useState } from "react";
 const CTASection1 = () => {
   return (
     <section className="py-16 md:py-24">
-      <div className="w-[80%] mx-auto">
+      <div className="w-[90%] md:w-[80%] mx-auto">
         {/* Header Text */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Now You're Getting{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Real Value</span>
@@ -41,26 +41,30 @@ const CTASection1 = () => {
         </div>
 
         {/* Green CTA Card */}
-        <div className="bg-lime-400 rounded-3xl h-[225px] p-8 md:p-12 relative overflow-visible">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-lime-400 rounded-3xl p-6 md:p-12 relative overflow-visible">
+          <div className="flex items-center justify-between gap-6">
+            {/* Left Content */}
             <div className="flex-1 z-10">
-              <h3 className="text-3xl md:text-4xl font-bold text-black mb-4">
+              <h3 className="text-2xl md:text-4xl font-bold text-black mb-4">
                 Download The App Now!
               </h3>
-              <p className="text-lg text-black mb-6">
+              <p className="text-base md:text-lg text-black mb-6 md:w-full w-[300px]">
                 Start earning rewards just by sharing your internet.
               </p>
-              <Button title="DOWNLOAD GRASS" className="bg-black text-white" />
+              <Button
+                title="DOWNLOAD GRASS"
+                className="bg-black text-white px-6 py-3"
+              />
             </div>
 
             {/* Right side illustration */}
-            <div className="flex-shrink-0 absolute right-0 top-[-110px]">
+            <div className="absolute right-[-20px] top-[5px] md:top-[-110px] w-[160px] sm:w-[220px] md:w-[300px]">
               <Image
                 src="/cta-1.png"
                 alt="Download App Illustration"
                 width={300}
                 height={300}
-                className="object-contain"
+                className="object-contain w-full h-auto"
               />
             </div>
           </div>
