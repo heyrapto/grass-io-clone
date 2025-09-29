@@ -1,9 +1,10 @@
 "use client"
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQSection = () => {
-  const [openQuestion, setOpenQuestion] = useState<number>(0);
+  const [openQuestion, setOpenQuestion] = useState<number>(-1);
 
   const faqs = [
     {
@@ -52,11 +53,12 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-2xl overflow-hidden cursor-pointer"
+              className="border border-gray-200 rounded-2xl overflow-hidden"
             >
+              {/* Question */}
               <button
                 onClick={() => toggleQuestion(index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors  cursor-pointer"
+                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
               >
                 <h3 className="text-lg font-semibold text-gray-900">
                   {faq.question}
@@ -65,18 +67,28 @@ const FAQSection = () => {
                   {openQuestion === index ? "−" : "+"}
                 </div>
               </button>
-              
-              {openQuestion === index && (
-                <div className="px-8 pb-6 border-t border-gray-100">
-                  <div className="pt-4 space-y-4">
-                    {faq.answer.map((paragraph, i) => (
-                      <p key={i} className="text-gray-700 leading-relaxed">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+              {/* Animated Answer */}
+              <AnimatePresence initial={false}>
+                {openQuestion === index && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden border-t border-gray-100"
+                  >
+                    <div className="px-8 pb-6 pt-4 space-y-4">
+                      {faq.answer.map((paragraph, i) => (
+                        <p key={i} className="text-gray-700 leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
