@@ -55,7 +55,7 @@ const NewsSection = () => {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
 
