@@ -1,5 +1,7 @@
-interface ButtonProps {
+import { ReactNode } from "react"
+
+export interface ButtonProps {
     title: string
-    className: any
+    className: ReactNode
     variant?: "green" | "white" | "black"
 }

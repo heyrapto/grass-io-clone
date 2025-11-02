@@ -12,7 +12,7 @@ const CTASection1 = () => {
         {/* Header Text */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Now You're Getting{" "}
+            Now You&apos;re Getting{" "}
             <span className="relative inline-block">
               <span className="relative z-10">Real Value</span>
               <motion.svg
@@ -36,7 +36,7 @@ const CTASection1 = () => {
               </motion.svg>
             </span>
             <br />
-            From A Resource You Didn't Know You Had
+            From A Resource You Didn&apos;t Know You Had
           </h2>
         </div>
 
@@ -81,7 +81,7 @@ const CTASection2 = () => {
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * (words.length - 1)) + 1;
     setHighlightedWord(randomIndex);
-  }, []);
+  }, [words.length]);
 
   return (
     <motion.section
