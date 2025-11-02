@@ -1,3 +1,5 @@
+import { ButtonProps } from "@/types/button"
+
 export const Button = ({ title, className, variant }: ButtonProps) => {
     // const widths = bidWidth ? "min-w-[150px] text-[16px[" : "min-w-[100px] text-[13px]"
     const variants = variant === "white" ? "bg-white text-black font-semibold" : variant === "green" ? "bg-lime-400 text-black font-semibold" : "bg-black text-white"
